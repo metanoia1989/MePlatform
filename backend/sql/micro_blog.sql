@@ -1,0 +1,11 @@
+CREATE TABLE `me_microblog` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `content` TEXT NOT NULL COMMENT '内容' COLLATE 'utf8mb4_general_ci',
+    `creater_uid` INT(10) NOT NULL DEFAULT 1 COMMENT '创建者ID',
+    `create_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `update_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`id`)
+)
+COMMENT='微博客表'
+ENGINE=InnoDB
+COLLATE='utf8mb4_general_ci';
